@@ -1,0 +1,34 @@
+# move subj folders using a subject list
+while read line ; do
+  mv "source_dir/${line}" destination_dir/
+done < text.txt
+
+# Access gpu node
+qrsh -l gpu
+
+# count folders in dir
+ls -l | grep "^d" | wc -l
+
+# change file to be executable 
+chmod +x
+
+# modify bashrc
+gedit ~/.bashrc
+
+# run code in command line
+./filename.sh
+
+module load 
+module av ants #for available versions
+
+#git version control
+git init #when you are in the folder you wanna control version for
+git add .
+git commit -m "the message you wanna add, be specific"
+git reset --soft hash #the hash, aka commit serial number, can be find under ./.git(susally hidden)/logs/HEAD. First 7 digits are good enough.
+
+#kill running jobs for a folder (for deleting it)
+lsof +D ./ | awk '{print $2}' | tail -n +2 | xargs -r kill -9
+
+#append “_backup” to all files that end in the .txt extension.
+find . -name "*.txt" -exec mv {} {}_backup \;
