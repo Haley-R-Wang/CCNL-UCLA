@@ -16,7 +16,6 @@ alias data='cd /u/project/CCN/kkarlsgo/data'
 alias HCP_EOP='cd /u/project/CCN/kkarlsgo/data/HCP/HCP_EOP'
 alias pipeline='cd /u/project/CCN/kkarlsgo/data/Training/dti/TBSS_practice/pipeline_script/HCP_EOP'
 alias scripts='cd /u/project/CCN/kkarlsgo/data/HCP/scripts'
-alias practice='cd /u/project/CCN/kkarlsgo/data/Training/dti/TBSS_practice/'
 
 module use /u/project/CCN/apps/modulefiles
 umask 007
