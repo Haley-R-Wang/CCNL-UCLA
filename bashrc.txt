@@ -1,0 +1,40 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# added 20110721- BMP
+# User specific aliases and functions
+#umask 0022
+
+alias q='qrsh -l h_data=4G,h_rt=8:00:00 -pe shared 2'
+alias qrsh_GICA='qrsh -l h_data=4G,h_rt=72:00:00,highp -pe shared 2'
+alias g='qrsh -l gpu'
+alias data='cd /u/project/CCN/kkarlsgo/data'
+alias HCP_EOP='cd /u/project/CCN/kkarlsgo/data/HCP/HCP_EOP'
+alias pipeline='cd /u/project/CCN/kkarlsgo/data/Training/dti/TBSS_practice/pipeline_script/HCP_EOP'
+alias scripts='cd /u/project/CCN/kkarlsgo/data/HCP/scripts'
+alias practice='cd /u/project/CCN/kkarlsgo/data/Training/dti/TBSS_practice/'
+
+module use /u/project/CCN/apps/modulefiles
+umask 007
+module load fsl/6.0.4
+module load freesurfer
+module load python/3.7.0
+module load matlab/9.1
+module load mricron
+module load cuda 
+module load ants/ants-2.3.1
+module load freesurfer/5.3.0-HCP
+
+
+export MATLAB
+
+
+#PATH=/u/project/CCN/apps/spm12
+
+# module load fsl > /dev/null 2>&1
+
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
