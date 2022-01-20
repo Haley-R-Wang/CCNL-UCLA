@@ -32,3 +32,6 @@ lsof +D ./ | awk '{print $2}' | tail -n +2 | xargs -r kill -9
 
 #append “_backup” to all files that end in the .txt extension.
 find . -name "*.txt" -exec mv {} {}_backup \;
+
+#check group available storage
+df -h /u/project/kkarlsgo/
